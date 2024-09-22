@@ -1,6 +1,7 @@
 class DogsController < ApplicationController
 
   def index
-    render json: {message:"test"}
+    @dogs = Dog.all
+    render template: "dogs/index"
   end
 end
